@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">YummFoodApp</string>
+    <string name="open_navigation_drawer">Open navigation drawer</string>
+    <string name="close_navigation_drawer">Close navigation drawer</string>
+    <string name="greentea">greentea</string>
+    <string name="potatos">potatoes</string>
+</resources>

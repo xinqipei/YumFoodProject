@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.yummfoodapp">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logoo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logoo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".OrderDetailsActivity"></activity>
+        <activity android:name=".OrderActivity" />
+        <activity android:name=".FavoriteActivity" />
+        <activity android:name=".Recipe2Activity" />
+        <activity android:name=".Recipe1Activity" />
+        <activity android:name=".RecipeActivity" />
+        <activity android:name=".SummaryActivity" />
+        <activity android:name=".InfoActivity" />
+        <activity android:name=".ProductDetailsActivity" />
+        <activity android:name=".AddProductActivity" />
+        <activity android:name=".PostDetailsActivity" />
+        <activity android:name=".ThereProfileActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity
+            android:name=".AddPostActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".ShopActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- define file provider -->
+        <!--
+ set the android:exported attribute to false;
+          the fileprovider does not need to be public.
+        -->
+        <!--
+ set the android:grantUriPermissions attributes to true,
+        to allow you to grant temporary access to files
+        -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.yummfoodapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
+        </provider>
+        <provider
+            android:name=".Database.OrderProvider"
+            android:authorities="com.example.yummfoodapp"
+            android:exported="true" />
+    </application>
+
+</manifest>

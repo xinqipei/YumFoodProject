@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="name"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+        app:layout_constraintStart_toEndOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="@+id/profile_image"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/logoo"
+        app:civ_border_color="#FBFBFB"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/pTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/moreBtn"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/postTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autoLink="all"
+        android:gravity="left"
+        android:hint="Title"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    <ImageView
+        android:id="@+id/postImage"
+
+        android:layout_width="389dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postTitle" />
+
+
+    <TextView
+        android:id="@+id/pTime"
+        android:layout_width="144dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:gravity="end
+"
+        android:hint=" 3 mins ago"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moreBtn" />
+
+    <ImageButton
+        android:id="@+id/moreBtn"
+        android:layout_width="52dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@null"
+        android:src="@drawable/ic_baseline_more_horiz_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/postDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/postTitle"
+        android:layout_marginTop="4dp"
+        android:autoLink="all"
+        android:hint="Description"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postImage" />
+
+    <TextView
+        android:id="@+id/pLikesTv"
+        android:layout_width="194dp"
+        android:layout_height="21dp"
+        android:layout_below="@id/postDescription"
+        android:autoLink="all"
+        android:text="1.2K Likes"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postDescription" />
+
+   <TextView
+        android:id="@+id/pCommentTv"
+        android:layout_width="190dp"
+        android:layout_height="18dp"
+        android:gravity="end"
+       android:visibility="gone"
+        android:text="1.2k Comments"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pLikesTv"
+        app:layout_constraintTop_toBottomOf="@+id/postDescription" />
+
+    <Button
+        android:id="@+id/likeBtn"
+        android:layout_width="163dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/pLikesTv"
+        android:background="@null"
+        android:drawableLeft="@drawable/ic_baseline_thumb_up_black"
+        android:text="LIKE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pLikesTv" />
+
+    <!-- <Button
+        android:id="@+id/commentBtn"
+
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pLikesTv"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:background="@null"
+        android:drawableLeft="@drawable/ic_baseline_comment_24"
+        android:text="Comments"
+        app:layout_constraintEnd_toStartOf="@+id/shareBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/likeBtn"
+        app:layout_constraintTop_toTopOf="@+id/likeBtn" /> -->
+
+    <Button
+        android:id="@+id/shareBtn"
+        android:layout_width="206dp"
+        android:layout_height="30dp"
+
+        android:background="@null"
+        android:drawableLeft="@drawable/ic_baseline_share_24"
+        android:text="Share"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/likeBtn" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+
+        android:drawableStart="@drawable/ic_baseline_comment_24"
+        android:drawablePadding="5dp"
+        android:text="Comments"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/likeBtn" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="410dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cAvatarIv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="192dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:src="@drawable/ic_edit_24"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/commentEt"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/sendBtn"
+        android:layout_toLeftOf="@+id/sendBtn"
+        android:layout_toEndOf="@+id/cAvatarIv"
+        android:layout_toRightOf="@+id/cAvatarIv"
+        android:background="@color/white"
+        android:hint="Enter comment..."
+        android:inputType="textCapSentences|textMultiLine"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/cAvatarIv"
+        app:layout_constraintEnd_toStartOf="@+id/sendBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/cAvatarIv"
+        app:layout_constraintTop_toTopOf="@+id/cAvatarIv"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/sendBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/white"
+        android:padding="12dp"
+        android:src="@drawable/ic_baseline_send_24"
+        app:layout_constraintBottom_toBottomOf="@+id/commentEt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/commentEt"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
